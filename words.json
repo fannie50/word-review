@@ -1,447 +1,833 @@
-const wordData = {
+{
   "Module 1": [
-    [
-      "animal",
-      "/ˈænɪməl/",
-      "动物"
-    ],
-    [
-      "panda",
-      "/ˈpændə/",
-      "大熊猫"
-    ],
-    [
-      "elephant",
-      "/ˈelɪfənt/",
-      "大象"
-    ],
-    [
-      "bear",
-      "/beə(r)/",
-      "熊"
-    ],
-    [
-      "giraffe",
-      "/dʒəˈrɑːf/",
-      "长颈鹿"
-    ],
-    [
-      "monkey",
-      "/ˈmʌŋki/",
-      "猴子"
-    ],
-    [
-      "them",
-      "/ðem/",
-      "他们"
-    ],
-    [
-      "draw",
-      "/drɔː/",
-      "画，绘画"
-    ],
-    [
-      "tiger",
-      "/ˈtaɪɡə(r)/",
-      "老虎"
-    ],
-    [
-      "strong",
-      "/strɒŋ/",
-      "强壮的，力气大的"
-    ],
-    [
-      "short",
-      "/ʃɔːt/",
-      "个子矮的"
-    ],
-    [
-      "white",
-      "/waɪt/",
-      "白色的"
-    ],
-    [
-      "brown",
-      "/braʊn/",
-      "棕色的，褐色的"
-    ],
-    [
-      "tall",
-      "/tɔːl/",
-      "高的，高大的"
-    ],
-    [
-      "him",
-      "/hɪm/",
-      "他"
-    ],
-    [
-      "ostrich",
-      "/ˈɒstrɪtʃ/",
-      "鸵鸟"
-    ],
-    [
-      "fast",
-      "/fɑːst/",
-      "快的，快速的"
-    ]
+    {
+      "english": "animal",
+      "phonetic": "/ˈænɪməl/",
+      "chinese": "动物"
+    },
+    {
+      "english": "panda",
+      "phonetic": "/ˈpændə/",
+      "chinese": "大熊猫"
+    },
+    {
+      "english": "elephant",
+      "phonetic": "/ˈelɪfənt/",
+      "chinese": "大象"
+    },
+    {
+      "english": "bear",
+      "phonetic": "/beə(r)/",
+      "chinese": "熊"
+    },
+    {
+      "english": "giraffe",
+      "phonetic": "/dʒəˈrɑːf/",
+      "chinese": "长颈鹿"
+    },
+    {
+      "english": "monkey",
+      "phonetic": "/ˈmʌŋki/",
+      "chinese": "猴子"
+    },
+    {
+      "english": "them",
+      "phonetic": "/ðem/",
+      "chinese": "他们"
+    },
+    {
+      "english": "draw",
+      "phonetic": "/drɔː/",
+      "chinese": "画，绘画"
+    },
+    {
+      "english": "tiger",
+      "phonetic": "/ˈtaɪɡə(r)/",
+      "chinese": "老虎"
+    },
+    {
+      "english": "strong",
+      "phonetic": "/strɒŋ/",
+      "chinese": "强壮的，力气大的"
+    },
+    {
+      "english": "short",
+      "phonetic": "/ʃɔːt/",
+      "chinese": "个子矮的"
+    },
+    {
+      "english": "white",
+      "phonetic": "/waɪt/",
+      "chinese": "白色的"
+    },
+    {
+      "english": "brown",
+      "phonetic": "/braʊn/",
+      "chinese": "棕色的，褐色的"
+    },
+    {
+      "english": "tall",
+      "phonetic": "/tɔːl/",
+      "chinese": "高的，高大的"
+    },
+    {
+      "english": "him",
+      "phonetic": "/hɪm/",
+      "chinese": "他"
+    },
+    {
+      "english": "ostrich",
+      "phonetic": "/ˈɒstrɪtʃ/",
+      "chinese": "鸵鸟"
+    },
+    {
+      "english": "fast",
+      "phonetic": "/fɑːst/",
+      "chinese": "快的，快速的"
+    }
   ],
   "Module 2": [
-    [
-      "small",
-      "/smɔːl/",
-      "小的"
-    ],
-    [
-      "lion",
-      "/ˈlaɪən/",
-      "狮子"
-    ],
-    [
-      "cute",
-      "/kjuːt/",
-      "可爱的，漂亮的"
-    ],
-    [
-      "out",
-      "/aʊt/",
-      "往外，向外，出来"
-    ],
-    [
-      "zoo",
-      "/zuː/",
-      "动物园"
-    ],
-    [
-      "go",
-      "/ɡəʊ/",
-      "走，去"
-    ],
-    [
-      "zebra",
-      "/ˈzebrə/",
-      "斑马"
-    ],
-    [
-      "move",
-      "/muːv/",
-      "移动"
-    ],
-    [
-      "road",
-      "/rəʊd/",
-      "路，道路"
-    ],
-    [
-      "dance",
-      "/dɑːns/",
-      "跳舞"
-    ],
-    [
-      "along",
-      "/əˈlɒŋ/",
-      "一起"
-    ],
-    [
-      "which",
-      "/wɪtʃ/",
-      "哪一个，哪些"
-    ],
-    [
-      "word",
-      "/wɜːd/",
-      "字，词，单词"
-    ],
-    [
-      "stone",
-      "/stəʊn/",
-      "石头"
-    ],
-    [
-      "hat",
-      "/hæt/",
-      "帽子"
-    ],
-    [
-      "shoe",
-      "/ʃuː/",
-      "鞋"
-    ]
+    {
+      "english": "small",
+      "phonetic": "/smɔːl/",
+      "chinese": "小的"
+    },
+    {
+      "english": "lion",
+      "phonetic": "/ˈlaɪən/",
+      "chinese": "狮子"
+    },
+    {
+      "english": "cute",
+      "phonetic": "/kjuːt/",
+      "chinese": "可爱的，漂亮的"
+    },
+    {
+      "english": "out",
+      "phonetic": "/aʊt/",
+      "chinese": "往外，向外，出来"
+    },
+    {
+      "english": "zoo",
+      "phonetic": "/zuː/",
+      "chinese": "动物园"
+    },
+    {
+      "english": "go",
+      "phonetic": "/ɡəʊ/",
+      "chinese": "走，去"
+    },
+    {
+      "english": "zebra",
+      "phonetic": "/ˈzebrə/",
+      "chinese": "斑马"
+    },
+    {
+      "english": "move",
+      "phonetic": "/muːv/",
+      "chinese": "移动"
+    },
+    {
+      "english": "road",
+      "phonetic": "/rəʊd/",
+      "chinese": "路，道路"
+    },
+    {
+      "english": "dance",
+      "phonetic": "/dɑːns/",
+      "chinese": "跳舞"
+    },
+    {
+      "english": "along",
+      "phonetic": "/əˈlɒŋ/",
+      "chinese": "一起"
+    },
+    {
+      "english": "which",
+      "phonetic": "/wɪtʃ/",
+      "chinese": "哪一个，哪些"
+    },
+    {
+      "english": "word",
+      "phonetic": "/wɜːd/",
+      "chinese": "字，词，单词"
+    },
+    {
+      "english": "stone",
+      "phonetic": "/stəʊn/",
+      "chinese": "石头"
+    },
+    {
+      "english": "hat",
+      "phonetic": "/hæt/",
+      "chinese": "帽子"
+    },
+    {
+      "english": "shoe",
+      "phonetic": "/ʃuː/",
+      "chinese": "鞋"
+    }
   ],
   "Module 3": [
-    [
-      "small",
-      "/smɔːl/",
-      "小的"
-    ],
-    [
-      "lion",
-      "/ˈlaɪən/",
-      "狮子"
-    ],
-    [
-      "cute",
-      "/kjuːt/",
-      "可爱的，漂亮的"
-    ],
-    [
-      "out",
-      "/aʊt/",
-      "往外，向外，出来"
-    ],
-    [
-      "zoo",
-      "/zuː/",
-      "动物园"
-    ],
-    [
-      "go",
-      "/ɡəʊ/",
-      "走，去"
-    ],
-    [
-      "zebra",
-      "/ˈzebrə/",
-      "斑马"
-    ],
-    [
-      "move",
-      "/muːv/",
-      "移动"
-    ],
-    [
-      "road",
-      "/rəʊd/",
-      "路，道路"
-    ],
-    [
-      "dance",
-      "/dɑːns/",
-      "跳舞"
-    ],
-    [
-      "along",
-      "/əˈlɒŋ/",
-      "一起"
-    ],
-    [
-      "which",
-      "/wɪtʃ/",
-      "哪一个，哪些"
-    ],
-    [
-      "word",
-      "/wɜːd/",
-      "字，词，单词"
-    ],
-    [
-      "stone",
-      "/stəʊn/",
-      "石头"
-    ],
-    [
-      "hat",
-      "/hæt/",
-      "帽子"
-    ],
-    [
-      "shoe",
-      "/ʃuː/",
-      "鞋"
-    ]
+    {
+      "english": "small",
+      "phonetic": "/smɔːl/",
+      "chinese": "小的"
+    },
+    {
+      "english": "lion",
+      "phonetic": "/ˈlaɪən/",
+      "chinese": "狮子"
+    },
+    {
+      "english": "cute",
+      "phonetic": "/kjuːt/",
+      "chinese": "可爱的，漂亮的"
+    },
+    {
+      "english": "out",
+      "phonetic": "/aʊt/",
+      "chinese": "往外，向外，出来"
+    },
+    {
+      "english": "zoo",
+      "phonetic": "/zuː/",
+      "chinese": "动物园"
+    },
+    {
+      "english": "go",
+      "phonetic": "/ɡəʊ/",
+      "chinese": "走，去"
+    },
+    {
+      "english": "zebra",
+      "phonetic": "/ˈzebrə/",
+      "chinese": "斑马"
+    },
+    {
+      "english": "move",
+      "phonetic": "/muːv/",
+      "chinese": "移动"
+    },
+    {
+      "english": "road",
+      "phonetic": "/rəʊd/",
+      "chinese": "路，道路"
+    },
+    {
+      "english": "dance",
+      "phonetic": "/dɑːns/",
+      "chinese": "跳舞"
+    },
+    {
+      "english": "along",
+      "phonetic": "/əˈlɒŋ/",
+      "chinese": "一起"
+    },
+    {
+      "english": "which",
+      "phonetic": "/wɪtʃ/",
+      "chinese": "哪一个，哪些"
+    },
+    {
+      "english": "word",
+      "phonetic": "/wɜːd/",
+      "chinese": "字，词，单词"
+    },
+    {
+      "english": "stone",
+      "phonetic": "/stəʊn/",
+      "chinese": "石头"
+    },
+    {
+      "english": "hat",
+      "phonetic": "/hæt/",
+      "chinese": "帽子"
+    },
+    {
+      "english": "shoe",
+      "phonetic": "/ʃuː/",
+      "chinese": "鞋"
+    }
   ],
   "Module 4": [
-    [
-      "rock",
-      "/rɒk/",
-      "石头，石子"
-    ],
-    [
-      "cool",
-      "/kuːl/",
-      "时髦的，酷的"
-    ],
-    [
-      "best",
-      "/best/",
-      "最好的"
-    ],
-    [
-      "part",
-      "/pɑːt/",
-      "器官，部位，组成部分"
-    ],
-    [
-      "well",
-      "/wel/",
-      "嗯，这个；健康的"
-    ],
-    [
-      "hear",
-      "/hɪə(r)/",
-      "听见"
-    ],
-    [
-      "smell",
-      "/smel/",
-      "闻到，嗅到"
-    ],
-    [
-      "talk",
-      "/tɔːk/",
-      "说话"
-    ],
-    [
-      "eat",
-      "/iːt/",
-      "吃"
-    ],
-    [
-      "hey",
-      "/heɪ/",
-      "嘿，喂"
-    ],
-    [
-      "stop",
-      "/stɒp/",
-      "停止，终止"
-    ],
-    [
-      "important",
-      "/ɪmˈpɔːtnt/",
-      "重要的"
-    ],
-    [
-      "team",
-      "/tiːm/",
-      "队"
-    ],
-    [
-      "dream",
-      "/driːm/",
-      "梦，梦想"
-    ],
-    [
-      "ask",
-      "/ɑːsk/",
-      "问，提问"
-    ],
-    [
-      "answer",
-      "/ˈɑːnsə(r)/",
-      "回答"
-    ],
-    [
-      "hair",
-      "/heə(r)/",
-      "头发"
-    ],
-    [
-      "different",
-      "/ˈdɪfrənt/",
-      "不同的"
-    ],
-    [
-      "face",
-      "/feɪs/",
-      "脸"
-    ]
+    {
+      "english": "rock",
+      "phonetic": "/rɒk/",
+      "chinese": "石头，石子"
+    },
+    {
+      "english": "cool",
+      "phonetic": "/kuːl/",
+      "chinese": "时髦的，酷的"
+    },
+    {
+      "english": "best",
+      "phonetic": "/best/",
+      "chinese": "最好的"
+    },
+    {
+      "english": "part",
+      "phonetic": "/pɑːt/",
+      "chinese": "器官，部位，组成部分"
+    },
+    {
+      "english": "well",
+      "phonetic": "/wel/",
+      "chinese": "嗯，这个；健康的"
+    },
+    {
+      "english": "hear",
+      "phonetic": "/hɪə(r)/",
+      "chinese": "听见"
+    },
+    {
+      "english": "smell",
+      "phonetic": "/smel/",
+      "chinese": "闻到，嗅到"
+    },
+    {
+      "english": "talk",
+      "phonetic": "/tɔːk/",
+      "chinese": "说话"
+    },
+    {
+      "english": "eat",
+      "phonetic": "/iːt/",
+      "chinese": "吃"
+    },
+    {
+      "english": "hey",
+      "phonetic": "/heɪ/",
+      "chinese": "嘿，喂"
+    },
+    {
+      "english": "stop",
+      "phonetic": "/stɒp/",
+      "chinese": "停止，终止"
+    },
+    {
+      "english": "important",
+      "phonetic": "/ɪmˈpɔːtnt/",
+      "chinese": "重要的"
+    },
+    {
+      "english": "team",
+      "phonetic": "/tiːm/",
+      "chinese": "队"
+    },
+    {
+      "english": "dream",
+      "phonetic": "/driːm/",
+      "chinese": "梦，梦想"
+    },
+    {
+      "english": "ask",
+      "phonetic": "/ɑːsk/",
+      "chinese": "问，提问"
+    },
+    {
+      "english": "answer",
+      "phonetic": "/ˈɑːnsə(r)/",
+      "chinese": "回答"
+    },
+    {
+      "english": "hair",
+      "phonetic": "/heə(r)/",
+      "chinese": "头发"
+    },
+    {
+      "english": "different",
+      "phonetic": "/ˈdɪfrənt/",
+      "chinese": "不同的"
+    },
+    {
+      "english": "face",
+      "phonetic": "/feɪs/",
+      "chinese": "脸"
+    }
   ],
   "Module 5": [
-    [
-      "rock",
-      "/rɒk/",
-      "石头，石子"
-    ],
-    [
-      "cool",
-      "/kuːl/",
-      "时髦的，酷的"
-    ],
-    [
-      "best",
-      "/best/",
-      "最好的"
-    ],
-    [
-      "part",
-      "/pɑːt/",
-      "器官，部位，组成部分"
-    ],
-    [
-      "well",
-      "/wel/",
-      "嗯，这个；健康的"
-    ],
-    [
-      "hear",
-      "/hɪə(r)/",
-      "听见"
-    ],
-    [
-      "smell",
-      "/smel/",
-      "闻到，嗅到"
-    ],
-    [
-      "talk",
-      "/tɔːk/",
-      "说话"
-    ],
-    [
-      "eat",
-      "/iːt/",
-      "吃"
-    ],
-    [
-      "hey",
-      "/heɪ/",
-      "嘿，喂"
-    ],
-    [
-      "stop",
-      "/stɒp/",
-      "停止，终止"
-    ],
-    [
-      "important",
-      "/ɪmˈpɔːtnt/",
-      "重要的"
-    ],
-    [
-      "team",
-      "/tiːm/",
-      "队"
-    ],
-    [
-      "dream",
-      "/driːm/",
-      "梦，梦想"
-    ],
-    [
-      "ask",
-      "/ɑːsk/",
-      "问，提问"
-    ],
-    [
-      "answer",
-      "/ˈɑːnsə(r)/",
-      "回答"
-    ],
-    [
-      "hair",
-      "/heə(r)/",
-      "头发"
-    ],
-    [
-      "different",
-      "/ˈdɪfrənt/",
-      "不同的"
-    ],
-    [
-      "face",
-      "/feɪs/",
-      "脸"
-    ]
+    {
+      "english": "vegetable",
+      "phonetic": "/ˈvedʒtəbl/",
+      "chinese": "蔬菜"
+    },
+    {
+      "english": "salad",
+      "phonetic": "/ˈsæləd/",
+      "chinese": "沙拉"
+    },
+    {
+      "english": "banana",
+      "phonetic": "/bəˈnɑːnə/",
+      "chinese": "香蕉"
+    },
+    {
+      "english": "bean",
+      "phonetic": "/biːn/",
+      "chinese": "豆子"
+    },
+    {
+      "english": "cucumber",
+      "phonetic": "/ˈkjuːkʌmbə(r)/",
+      "chinese": "黄瓜"
+    },
+    {
+      "english": "then",
+      "phonetic": "/ðen/",
+      "chinese": "那么，然后"
+    },
+    {
+      "english": "about",
+      "phonetic": "/əˈbaʊt/",
+      "chinese": "关于"
+    },
+    {
+      "english": "grape",
+      "phonetic": "/ɡreɪp/",
+      "chinese": "葡萄"
+    },
+    {
+      "english": "juice",
+      "phonetic": "/dʒuːs/",
+      "chinese": "果汁"
+    },
+    {
+      "english": "why",
+      "phonetic": "/waɪ/",
+      "chinese": "为什么"
+    },
+    {
+      "english": "early",
+      "phonetic": "/ˈɜːli/",
+      "chinese": "早的"
+    },
+    {
+      "english": "breakfast",
+      "phonetic": "/ˈbrekfəst/",
+      "chinese": "早餐"
+    },
+    {
+      "english": "time",
+      "phonetic": "/taɪm/",
+      "chinese": "时间"
+    },
+    {
+      "english": "still",
+      "phonetic": "/stɪl/",
+      "chinese": "还，仍然"
+    },
+    {
+      "english": "ready",
+      "phonetic": "/ˈredi/",
+      "chinese": "准备好的"
+    },
+    {
+      "english": "corn",
+      "phonetic": "/kɔːn/",
+      "chinese": "玉米"
+    },
+    {
+      "english": "lunch",
+      "phonetic": "/lʌntʃ/",
+      "chinese": "午餐"
+    },
+    {
+      "english": "very",
+      "phonetic": "/ˈveri/",
+      "chinese": "很"
+    },
+    {
+      "english": "much",
+      "phonetic": "/mʌtʃ/",
+      "chinese": "非常"
+    },
+    {
+      "english": "afternoon",
+      "phonetic": "/ˌɑːftəˈnuːn/",
+      "chinese": "下午"
+    },
+    {
+      "english": "tea",
+      "phonetic": "/tiː/",
+      "chinese": "茶"
+    },
+    {
+      "english": "every",
+      "phonetic": "/ˈevri/",
+      "chinese": "每"
+    },
+    {
+      "english": "week",
+      "phonetic": "/wiːk/",
+      "chinese": "星期"
+    },
+    {
+      "english": "tree",
+      "phonetic": "/triː/",
+      "chinese": "树"
+    },
+    {
+      "english": "milk",
+      "phonetic": "/mɪlk/",
+      "chinese": "牛奶"
+    },
+    {
+      "english": "cupcake",
+      "phonetic": "/ˈkʌpkeɪk/",
+      "chinese": "杯形蛋糕"
+    },
+    {
+      "english": "sandwich",
+      "phonetic": "/ˈsænwɪtʃ/",
+      "chinese": "三明治"
+    },
+    {
+      "english": "beef",
+      "phonetic": "/biːf/",
+      "chinese": "牛肉"
+    },
+    {
+      "english": "dumpling",
+      "phonetic": "/ˈdʌmplɪŋ/",
+      "chinese": "水饺"
+    },
+    {
+      "english": "hot",
+      "phonetic": "/hɒt/",
+      "chinese": "热的"
+    },
+    {
+      "english": "sushi",
+      "phonetic": "/ˈsuːʃi/",
+      "chinese": "寿司"
+    },
+    {
+      "english": "cake",
+      "phonetic": "/keɪk/",
+      "chinese": "蛋糕"
+    }
+  ],
+  "Module 6": [
+    {
+      "english": "hobby",
+      "phonetic": "/ˈhɒbi/",
+      "chinese": "业余爱好"
+    },
+    {
+      "english": "free",
+      "phonetic": "/friː/",
+      "chinese": "空闲的"
+    },
+    {
+      "english": "after",
+      "phonetic": "/ˈɑːftə(r)/",
+      "chinese": "在…后"
+    },
+    {
+      "english": "swim",
+      "phonetic": "/swɪm/",
+      "chinese": "游泳"
+    },
+    {
+      "english": "lot",
+      "phonetic": "/lɒt/",
+      "chinese": "许多"
+    },
+    {
+      "english": "these",
+      "phonetic": "/ðiːz/",
+      "chinese": "这些"
+    },
+    {
+      "english": "tai chi",
+      "phonetic": "/ˌtaɪ ˈtʃiː/",
+      "chinese": "太极"
+    },
+    {
+      "english": "his",
+      "phonetic": "/hɪz/",
+      "chinese": "他的"
+    },
+    {
+      "english": "insect",
+      "phonetic": "/ˈɪnsekt/",
+      "chinese": "昆虫"
+    },
+    {
+      "english": "man",
+      "phonetic": "/mæn/",
+      "chinese": "成年男子"
+    },
+    {
+      "english": "learn",
+      "phonetic": "/lɜːn/",
+      "chinese": "学习"
+    },
+    {
+      "english": "plant",
+      "phonetic": "/plɑːnt/",
+      "chinese": "植物"
+    },
+    {
+      "english": "when",
+      "phonetic": "/wen/",
+      "chinese": "什么时候"
+    },
+    {
+      "english": "question",
+      "phonetic": "/ˈkwestʃən/",
+      "chinese": "问题"
+    },
+    {
+      "english": "watch",
+      "phonetic": "/wɒtʃ/",
+      "chinese": "观察"
+    },
+    {
+      "english": "study",
+      "phonetic": "/ˈstʌdi/",
+      "chinese": "研究"
+    },
+    {
+      "english": "mantis",
+      "phonetic": "/ˈmæntɪs/",
+      "chinese": "螳螂"
+    },
+    {
+      "english": "stay",
+      "phonetic": "/steɪ/",
+      "chinese": "停留"
+    },
+    {
+      "english": "interesting",
+      "phonetic": "/ˈɪntrəstɪŋ/",
+      "chinese": "有趣的"
+    },
+    {
+      "english": "grow",
+      "phonetic": "/ɡrəʊ/",
+      "chinese": "成长"
+    },
+    {
+      "english": "country",
+      "phonetic": "/ˈkʌntri/",
+      "chinese": "国家"
+    },
+    {
+      "english": "robot",
+      "phonetic": "/ˈrəʊbɒt/",
+      "chinese": "机器人"
+    },
+    {
+      "english": "kite",
+      "phonetic": "/kaɪt/",
+      "chinese": "风筝"
+    },
+    {
+      "english": "skate",
+      "phonetic": "/skeɪt/",
+      "chinese": "滑冰"
+    },
+    {
+      "english": "ice",
+      "phonetic": "/aɪs/",
+      "chinese": "冰"
+    },
+    {
+      "english": "ski",
+      "phonetic": "/skiː/",
+      "chinese": "滑雪"
+    },
+    {
+      "english": "garden",
+      "phonetic": "/ˈɡɑːdn/",
+      "chinese": "花园；做园艺"
+    }
+  ],
+  "Module 7": [
+    {
+      "english": "tick-tock",
+      "phonetic": "/ˈtɪk tɒk/",
+      "chinese": "滴答声"
+    },
+    {
+      "english": "tell",
+      "phonetic": "/tel/",
+      "chinese": "告诉"
+    },
+    {
+      "english": "clock",
+      "phonetic": "/klɒk/",
+      "chinese": "时钟"
+    },
+    {
+      "english": "o'clock",
+      "phonetic": "/əˈklɒk/",
+      "chinese": "点钟"
+    },
+    {
+      "english": "fifteen",
+      "phonetic": "/ˌfɪfˈtiːn/",
+      "chinese": "十五"
+    },
+    {
+      "english": "thirty",
+      "phonetic": "/ˈθɜːti/",
+      "chinese": "三十"
+    },
+    {
+      "english": "forty-five",
+      "phonetic": "/ˌfɔːti ˈfaɪv/",
+      "chinese": "四十五"
+    },
+    {
+      "english": "dinner",
+      "phonetic": "/ˈdɪnə(r)/",
+      "chinese": "正餐"
+    },
+    {
+      "english": "half",
+      "phonetic": "/hɑːf/",
+      "chinese": "一半"
+    },
+    {
+      "english": "past",
+      "phonetic": "/pɑːst/",
+      "chinese": "晚于"
+    },
+    {
+      "english": "homework",
+      "phonetic": "/ˈhəʊmwɜːk/",
+      "chinese": "家庭作业"
+    },
+    {
+      "english": "need",
+      "phonetic": "/niːd/",
+      "chinese": "需要"
+    },
+    {
+      "english": "activity",
+      "phonetic": "/ækˈtɪvəti/",
+      "chinese": "活动"
+    },
+    {
+      "english": "her",
+      "phonetic": "/hɜː(r)/",
+      "chinese": "她的"
+    },
+    {
+      "english": "class",
+      "phonetic": "/klɑːs/",
+      "chinese": "课"
+    },
+    {
+      "english": "evening",
+      "phonetic": "/ˈiːvnɪŋ/",
+      "chinese": "傍晚"
+    },
+    {
+      "english": "call",
+      "phonetic": "/kɔːl/",
+      "chinese": "打电话"
+    }
+  ],
+  "Module 8": [
+    {
+      "english": "Monday",
+      "phonetic": "/ˈmʌndeɪ/",
+      "chinese": "星期一"
+    },
+    {
+      "english": "Tuesday",
+      "phonetic": "/ˈtjuːzdeɪ/",
+      "chinese": "星期二"
+    },
+    {
+      "english": "Wednesday",
+      "phonetic": "/ˈwenzdeɪ/",
+      "chinese": "星期三"
+    },
+    {
+      "english": "Thursday",
+      "phonetic": "/ˈθɜːzdeɪ/",
+      "chinese": "星期四"
+    },
+    {
+      "english": "Friday",
+      "phonetic": "/ˈfraɪdeɪ/",
+      "chinese": "星期五"
+    },
+    {
+      "english": "Saturday",
+      "phonetic": "/ˈsætədeɪ/",
+      "chinese": "星期六"
+    },
+    {
+      "english": "Sunday",
+      "phonetic": "/ˈsʌndeɪ/",
+      "chinese": "星期日"
+    },
+    {
+      "english": "park",
+      "phonetic": "/pɑːk/",
+      "chinese": "公园"
+    },
+    {
+      "english": "visit",
+      "phonetic": "/ˈvɪzɪt/",
+      "chinese": "看望"
+    },
+    {
+      "english": "lesson",
+      "phonetic": "/ˈlesn/",
+      "chinese": "课"
+    },
+    {
+      "english": "football",
+      "phonetic": "/ˈfʊtbɔːl/",
+      "chinese": "足球"
+    },
+    {
+      "english": "art",
+      "phonetic": "/ɑːt/",
+      "chinese": "美术"
+    },
+    {
+      "english": "subject",
+      "phonetic": "/ˈsʌbdʒɪkt/",
+      "chinese": "学科"
+    },
+    {
+      "english": "maths",
+      "phonetic": "/mæθs/",
+      "chinese": "数学"
+    },
+    {
+      "english": "science",
+      "phonetic": "/ˈsaɪəns/",
+      "chinese": "科学"
+    },
+    {
+      "english": "something",
+      "phonetic": "/ˈsʌmθɪŋ/",
+      "chinese": "某物"
+    },
+    {
+      "english": "idea",
+      "phonetic": "/aɪˈdɪə/",
+      "chinese": "想法"
+    },
+    {
+      "english": "soon",
+      "phonetic": "/suːn/",
+      "chinese": "不久"
+    },
+    {
+      "english": "teach",
+      "phonetic": "/tiːtʃ/",
+      "chinese": "教"
+    }
   ]
-};
+}
