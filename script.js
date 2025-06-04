@@ -2,6 +2,7 @@
 let words = {};
 let currentModule = "";
 let currentIndex = 0;
+let quizMode = false;
 
 fetch("words.json")
   .then(response => response.json())
@@ -15,6 +16,7 @@ fetch("words.json")
       moduleSelect.appendChild(option);
     }
     currentModule = moduleSelect.value;
+    showWord();
   });
 
 function changeModule(value) {
@@ -29,20 +31,44 @@ function nextWord() {
   showWord();
 }
 
-function showWord() {
-  const wordObj = words[currentModule][currentIndex];
-  document.getElementById("english").textContent = wordObj.english;
-  document.getElementById("phonetic").textContent = wordObj.phonetic;
-  document.getElementById("chinese").textContent = wordObj.chinese;
+function toggleMode() {
+  quizMode = !quizMode;
+  document.getElementById("modeBtn").textContent = quizMode ? "切换为背诵模式" : "切换为测验模式";
+  showWord();
 }
 
-// 发音功能
+function showWord() {
+  const wordObj = words[currentModule][currentIndex];
+  const englishEl = document.getElementById("english");
+  const phoneticEl = document.getElementById("phonetic");
+  const chineseEl = document.getElementById("chinese");
+
+  if (quizMode) {
+    // 测验模式：只显示中文，点击英文显示答案
+    englishEl.textContent = "❓ 点击显示英文";
+    phoneticEl.textContent = "";
+    chineseEl.textContent = wordObj.chinese;
+
+    englishEl.onclick = () => {
+      englishEl.textContent = wordObj.english;
+      phoneticEl.textContent = wordObj.phonetic;
+      speakWord(wordObj.english);
+    };
+  } else {
+    // 背诵模式：全部显示
+    englishEl.textContent = wordObj.english;
+    phoneticEl.textContent = wordObj.phonetic;
+    chineseEl.textContent = wordObj.chinese;
+    englishEl.onclick = () => speakWord(wordObj.english);
+  }
+}
+
+function speakWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-US";
+  speechSynthesis.speak(utterance);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const englishElem = document.getElementById("english");
-  englishElem.addEventListener("click", () => {
-    const word = englishElem.textContent;
-    const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = "en-US";
-    speechSynthesis.speak(utterance);
-  });
+  document.getElementById("english").onclick = () => {};
 });
