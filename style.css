@@ -1,54 +1,116 @@
 
 body {
-  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   text-align: center;
-  background-color: #fff9f0;
-  padding: 20px;
+  padding: 10px;
+  margin: 0;
+  background-color: #f0f8ff;
 }
+
 h1 {
-  font-size: 28px;
+  font-size: 24px;
+  margin-bottom: 20px;
   color: #333;
 }
+
 .controls {
   margin-bottom: 20px;
 }
-button, select, input {
-  font-size: 16px;
-  padding: 6px 10px;
+
+.controls select,
+.controls button {
+  padding: 10px;
   margin: 5px;
-  border-radius: 6px;
+  font-size: 16px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
+
 .card {
-  background: #fff;
-  display: inline-block;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 10px;
+  background: white;
+  padding: 20px;
+  margin: auto;
+  max-width: 480px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
+
 .english {
   font-size: 28px;
   font-weight: bold;
-  margin: 10px 0;
+  color: #0074D9;
+  margin-bottom: 10px;
 }
+
 .phonetic {
   font-size: 20px;
-  color: #666;
-  margin: 5px 0;
+  color: #555;
 }
+
 .chinese {
   font-size: 20px;
-  color: #222;
-  margin: 8px 0;
+  color: #2E8B57;
+  margin-bottom: 15px;
 }
-.scrambled {
-  margin: 10px 0;
-  font-size: 24px;
-  letter-spacing: 5px;
+
+#scrambled {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
 }
-.letter {
-  display: inline-block;
-  border-bottom: 2px dotted #ccc;
-  padding: 0 4px;
+
+.scrambled span {
+  font-size: 22px;
+  margin: 5px;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  padding: 8px;
+  width: 80%;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background: #0074D9;
+  color: white;
+  border: none;
+}
+
+button:disabled {
+  background: #ccc;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .controls select,
+  .controls button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .english {
+    font-size: 24px;
+  }
+
+  .phonetic, .chinese {
+    font-size: 18px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
 }
