@@ -3,21 +3,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>英语单词背诵</title>
+  <title>发音识别练习</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>英语单词背诵 & 测验</h1>
+  <h1>发音识别练习</h1>
   <div class="controls">
     <label for="module">选择模块：</label>
     <select id="module" onchange="changeModule(this.value)"></select>
     <button onclick="nextWord()">下一个单词</button>
-    <button id="modeBtn" onclick="toggleMode()">切换为测验模式</button>
+    <button onclick="speakWord(document.getElementById('english').textContent)">🔊 听发音</button>
+    <button onclick="startVoiceRecognition()">🎤 说出单词</button>
   </div>
   <div class="card">
     <p class="english" id="english">点击“下一个单词”开始</p>
     <p class="phonetic" id="phonetic"></p>
     <p class="chinese" id="chinese"></p>
+    <p id="resultText" style="font-size:18px; color:#333; margin-top:10px;"></p>
   </div>
   <script src="script.js"></script>
 </body>
