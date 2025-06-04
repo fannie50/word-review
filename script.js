@@ -2,7 +2,8 @@
 let words = {};
 let currentModule = "";
 let currentIndex = 0;
-let quizMode = false;
+let recognizing = false;
+let recognition;
 
 fetch("words.json")
   .then(response => response.json())
@@ -31,36 +32,12 @@ function nextWord() {
   showWord();
 }
 
-function toggleMode() {
-  quizMode = !quizMode;
-  document.getElementById("modeBtn").textContent = quizMode ? "切换为背诵模式" : "切换为测验模式";
-  showWord();
-}
-
 function showWord() {
   const wordObj = words[currentModule][currentIndex];
-  const englishEl = document.getElementById("english");
-  const phoneticEl = document.getElementById("phonetic");
-  const chineseEl = document.getElementById("chinese");
-
-  if (quizMode) {
-    // 测验模式：只显示中文，点击英文显示答案
-    englishEl.textContent = "❓ 点击显示英文";
-    phoneticEl.textContent = "";
-    chineseEl.textContent = wordObj.chinese;
-
-    englishEl.onclick = () => {
-      englishEl.textContent = wordObj.english;
-      phoneticEl.textContent = wordObj.phonetic;
-      speakWord(wordObj.english);
-    };
-  } else {
-    // 背诵模式：全部显示
-    englishEl.textContent = wordObj.english;
-    phoneticEl.textContent = wordObj.phonetic;
-    chineseEl.textContent = wordObj.chinese;
-    englishEl.onclick = () => speakWord(wordObj.english);
-  }
+  document.getElementById("english").textContent = wordObj.english;
+  document.getElementById("phonetic").textContent = wordObj.phonetic;
+  document.getElementById("chinese").textContent = wordObj.chinese;
+  document.getElementById("resultText").textContent = "";
 }
 
 function speakWord(word) {
@@ -69,6 +46,38 @@ function speakWord(word) {
   speechSynthesis.speak(utterance);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("english").onclick = () => {};
-});
+function startVoiceRecognition() {
+  const wordObj = words[currentModule][currentIndex];
+
+  if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+    alert("当前浏览器不支持语音识别，请使用 Chrome 或 Edge 浏览器。");
+    return;
+  }
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.start();
+  recognizing = true;
+
+  recognition.onresult = function (event) {
+    const spoken = event.results[0][0].transcript.toLowerCase().trim();
+    const expected = wordObj.english.toLowerCase();
+
+    if (spoken === expected) {
+      document.getElementById("resultText").textContent = `✅ 正确：你说了 "${spoken}"`;
+      nextWord();
+    } else {
+      document.getElementById("resultText").textContent = `❌ 错误：你说的是 "${spoken}"，正确是 "${expected}"`;
+    }
+    recognizing = false;
+  };
+
+  recognition.onerror = function (event) {
+    document.getElementById("resultText").textContent = "❌ 识别失败，请再试一次";
+    recognizing = false;
+  };
+}
