@@ -2,7 +2,7 @@
 let words = {};
 let currentModule = "";
 let currentIndex = 0;
-let recognizing = false;
+let spellMode = true;
 let recognition;
 
 fetch("words.json")
@@ -32,12 +32,54 @@ function nextWord() {
   showWord();
 }
 
+function toggleMode() {
+  spellMode = !spellMode;
+  document.getElementById("modeBtn").textContent = spellMode ? "切换为背诵模式" : "切换为拼写练习";
+  showWord();
+}
+
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
 function showWord() {
   const wordObj = words[currentModule][currentIndex];
-  document.getElementById("english").textContent = wordObj.english;
-  document.getElementById("phonetic").textContent = wordObj.phonetic;
-  document.getElementById("chinese").textContent = wordObj.chinese;
-  document.getElementById("resultText").textContent = "";
+  const englishEl = document.getElementById("english");
+  const phoneticEl = document.getElementById("phonetic");
+  const chineseEl = document.getElementById("chinese");
+  const inputEl = document.getElementById("answerInput");
+  const checkBtn = document.getElementById("checkBtn");
+  const scrambledEl = document.getElementById("scrambled");
+  const resultText = document.getElementById("resultText");
+
+  resultText.textContent = "";
+
+  if (!spellMode) {
+    englishEl.textContent = wordObj.english;
+    phoneticEl.textContent = wordObj.phonetic;
+    chineseEl.textContent = wordObj.chinese;
+    inputEl.style.display = "none";
+    checkBtn.style.display = "none";
+    scrambledEl.innerHTML = "";
+    englishEl.onclick = () => speakWord(wordObj.english);
+  } else {
+    englishEl.textContent = "请根据中文提示拼出英文：";
+    phoneticEl.textContent = wordObj.chinese;
+    chineseEl.textContent = "";
+    inputEl.value = "";
+    inputEl.style.display = "inline-block";
+    checkBtn.style.display = "inline-block";
+    inputEl.placeholder = "输入英文单词";
+    scrambledEl.innerHTML = shuffleArray(wordObj.english.split("")).map(c => `<span class='letter'>${c}</span>`).join(" ");
+    checkBtn.onclick = () => {
+      if (inputEl.value.toLowerCase().trim() === wordObj.english.toLowerCase()) {
+        resultText.textContent = `✅ 拼写正确！`;
+        nextWord();
+      } else {
+        resultText.textContent = `❌ 再试一次！`;
+      }
+    };
+  }
 }
 
 function speakWord(word) {
@@ -48,9 +90,10 @@ function speakWord(word) {
 
 function startVoiceRecognition() {
   const wordObj = words[currentModule][currentIndex];
+  const resultText = document.getElementById("resultText");
 
   if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
-    alert("当前浏览器不支持语音识别，请使用 Chrome 或 Edge 浏览器。");
+    alert("当前浏览器不支持语音识别，请使用 Chrome 或 Edge。");
     return;
   }
 
@@ -61,23 +104,19 @@ function startVoiceRecognition() {
   recognition.maxAlternatives = 1;
 
   recognition.start();
-  recognizing = true;
 
   recognition.onresult = function (event) {
     const spoken = event.results[0][0].transcript.toLowerCase().trim();
     const expected = wordObj.english.toLowerCase();
-
     if (spoken === expected) {
-      document.getElementById("resultText").textContent = `✅ 正确：你说了 "${spoken}"`;
+      resultText.textContent = `🎉 正确：你说了 "${spoken}"`;
       nextWord();
     } else {
-      document.getElementById("resultText").textContent = `❌ 错误：你说的是 "${spoken}"，正确是 "${expected}"`;
+      resultText.textContent = `😢 错误：你说的是 "${spoken}"，正确是 "${expected}"`;
     }
-    recognizing = false;
   };
 
-  recognition.onerror = function (event) {
-    document.getElementById("resultText").textContent = "❌ 识别失败，请再试一次";
-    recognizing = false;
+  recognition.onerror = function () {
+    resultText.textContent = "❌ 识别失败，请再试一次";
   };
 }
