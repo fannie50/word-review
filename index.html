@@ -1,29 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>智能单词练习</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>智能英语单词学习系统</h1>
-  <div class="controls">
-    <label for="module">选择模块：</label>
-    <select id="module" onchange="changeModule(this.value)"></select>
-    <button onclick="nextWord()">下一个单词</button>
-    <button id="modeBtn" onclick="toggleMode()">切换为拼写练习</button>
-    <button onclick="speakWord(document.getElementById('english').textContent)">🔊 听发音</button>
-    <button onclick="startVoiceRecognition()">🎤 说出单词</button>
-  </div>
-  <div class="card">
-    <p class="english" id="english">点击“下一个单词”开始</p>
-    <p class="phonetic" id="phonetic"></p>
-    <p class="chinese" id="chinese"></p>
-    <div id="scrambled" class="scrambled"></div>
-    <input type="text" id="answerInput" style="display:none" />
-    <button id="checkBtn" style="display:none">检查拼写</button>
-    <p id="resultText" style="font-size:18px; color:#333; margin-top:10px;"></p>
+  <div class="container">
+    <h1>智能英语单词学习系统</h1>
+    <div class="controls">
+      <label for="module">选择模块：</label>
+      <select id="module" onchange="changeModule(this.value)"></select>
+      <button onclick="nextWord()">下一个单词</button>
+      <button id="modeBtn" onclick="toggleMode()">切换为拼写练习</button>
+      <button onclick="speakWord(document.getElementById('english').textContent)">🔊 听发音</button>
+      <button onclick="startVoiceRecognition()">🎤 说出单词</button>
+    </div>
+    <div class="card">
+      <p class="english" id="english">点击"下一个单词"开始</p>
+      <p class="phonetic" id="phonetic"></p>
+      <p class="chinese" id="chinese"></p>
+      <div id="scrambled" class="scrambled"></div>
+      <input type="text" id="answerInput" style="display:none" placeholder="输入单词..." />
+      <button id="checkBtn" style="display:none" onclick="checkSpelling()">检查拼写</button>
+      <p id="resultText"></p>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+      <span id="progressText">0/0</span>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
