@@ -9,81 +9,78 @@
       "english": "panda",
       "phonetic": "/ˈpændə/",
       "chinese": "大熊猫"
+    }
+  ],
+  "Module 2": [
+    {
+      "english": "small",
+      "phonetic": "/smɔːl/",
+      "chinese": "小的"
     },
     {
-      "english": "elephant",
-      "phonetic": "/ˈelɪfənt/",
-      "chinese": "大象"
+      "english": "lion",
+      "phonetic": "/ˈlaɪən/",
+      "chinese": "狮子"
+    }
+  ],
+  "Module 4 & 5": [
+    {
+      "english": "rock",
+      "phonetic": "/rɒk/",
+      "chinese": "石头，石子"
     },
     {
-      "english": "bear",
-      "phonetic": "/beə(r)/",
-      "chinese": "熊"
+      "english": "cool",
+      "phonetic": "/kuːl/",
+      "chinese": "时髦的，酷的"
+    }
+  ],
+  "Module 6": [
+    {
+      "english": "vegetable",
+      "phonetic": "/ˈvedʒtəbl/",
+      "chinese": "蔬菜"
     },
     {
-      "english": "giraffe",
-      "phonetic": "/dʒəˈrɑːf/",
-      "chinese": "长颈鹿"
+      "english": "banana",
+      "phonetic": "/bəˈnɑːnə/",
+      "chinese": "香蕉"
+    }
+  ],
+  "Module 7": [
+    {
+      "english": "hobby",
+      "phonetic": "/ˈhɒbi/",
+      "chinese": "业余爱好"
     },
     {
-      "english": "monkey",
-      "phonetic": "/ˈmʌŋki/",
-      "chinese": "猴子"
+      "english": "swim",
+      "phonetic": "/swɪm/",
+      "chinese": "游泳"
+    }
+  ],
+  "Module 8": [
+    {
+      "english": "tick-tock",
+      "phonetic": "/ˈtɪk tɒk/",
+      "chinese": "滴答声"
     },
     {
-      "english": "them",
-      "phonetic": "/ðem/",
-      "chinese": "他们"
+      "english": "clock",
+      "phonetic": "/klɒk/",
+      "chinese": "时钟"
+    }
+  ],
+  "Module 9": [
+    {
+      "english": "Monday",
+      "phonetic": "/ˈmʌndeɪ/",
+      "chinese": "星期一"
     },
     {
-      "english": "draw",
-      "phonetic": "/drɔː/",
-      "chinese": "画，绘画"
-    },
-    {
-      "english": "tiger",
-      "phonetic": "/ˈtaɪɡə(r)/",
-      "chinese": "老虎"
-    },
-    {
-      "english": "strong",
-      "phonetic": "/strɒŋ/",
-      "chinese": "强壮的，力气大的"
-    },
-    {
-      "english": "short",
-      "phonetic": "/ʃɔːt/",
-      "chinese": "个子矮的"
-    },
-    {
-      "english": "white",
-      "phonetic": "/waɪt/",
-      "chinese": "白色的"
-    },
-    {
-      "english": "brown",
-      "phonetic": "/braʊn/",
-      "chinese": "棕色的，褐色的"
-    },
-    {
-      "english": "tall",
-      "phonetic": "/tɔːl/",
-      "chinese": "高的，高大的"
-    },
-    {
-      "english": "him",
-      "phonetic": "/hɪm/",
-      "chinese": "他"
-    },
-    {
-      "english": "ostrich",
-      "phonetic": "/ˈɒstrɪtʃ/",
-      "chinese": "鸵鸟"
-    },
-    {
-      "english": "fast",
-      "phonetic": "/fɑːst/",
-      "chinese": "快的，快速的"
+      "english": "Friday",
+      "phonetic": "/ˈfraɪdeɪ/",
+      "chinese": "星期五"
     }
   ]
 }
