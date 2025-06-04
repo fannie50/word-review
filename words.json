@@ -6,9 +6,9 @@
       "chinese": "动物"
     },
     {
-      "english": "panda",
-      "phonetic": "/ˈpændə/",
-      "chinese": "大熊猫"
+      "english": "elephant",
+      "phonetic": "/ˈelɪfənt/",
+      "chinese": "大象"
     }
   ],
   "Module 2": [
@@ -18,40 +18,52 @@
       "chinese": "小的"
     },
     {
-      "english": "lion",
-      "phonetic": "/ˈlaɪən/",
-      "chinese": "狮子"
+      "english": "zoo",
+      "phonetic": "/zuː/",
+      "chinese": "动物园"
+    }
+  ],
+  "Module 3": [
+    {
+      "english": "move",
+      "phonetic": "/muːv/",
+      "chinese": "移动"
+    },
+    {
+      "english": "dance",
+      "phonetic": "/dɑːns/",
+      "chinese": "跳舞"
     }
   ],
   "Module 4 & 5": [
     {
       "english": "rock",
       "phonetic": "/rɒk/",
-      "chinese": "石头，石子"
+      "chinese": "石头"
     },
     {
-      "english": "cool",
-      "phonetic": "/kuːl/",
-      "chinese": "时髦的，酷的"
+      "english": "team",
+      "phonetic": "/tiːm/",
+      "chinese": "队"
     }
   ],
   "Module 6": [
     {
-      "english": "vegetable",
-      "phonetic": "/ˈvedʒtəbl/",
-      "chinese": "蔬菜"
-    },
-    {
       "english": "banana",
       "phonetic": "/bəˈnɑːnə/",
       "chinese": "香蕉"
+    },
+    {
+      "english": "milk",
+      "phonetic": "/mɪlk/",
+      "chinese": "牛奶"
     }
   ],
   "Module 7": [
     {
       "english": "hobby",
       "phonetic": "/ˈhɒbi/",
-      "chinese": "业余爱好"
+      "chinese": "爱好"
     },
     {
       "english": "swim",
@@ -61,14 +73,14 @@
   ],
   "Module 8": [
     {
-      "english": "tick-tock",
-      "phonetic": "/ˈtɪk tɒk/",
-      "chinese": "滴答声"
-    },
-    {
       "english": "clock",
       "phonetic": "/klɒk/",
       "chinese": "时钟"
+    },
+    {
+      "english": "dinner",
+      "phonetic": "/ˈdɪnə(r)/",
+      "chinese": "晚餐"
     }
   ],
   "Module 9": [
@@ -78,9 +90,9 @@
       "chinese": "星期一"
     },
     {
-      "english": "Friday",
-      "phonetic": "/ˈfraɪdeɪ/",
-      "chinese": "星期五"
+      "english": "football",
+      "phonetic": "/ˈfʊtbɔːl/",
+      "chinese": "足球"
     }
   ]
 }
