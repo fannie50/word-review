@@ -35,3 +35,14 @@ function showWord() {
   document.getElementById("phonetic").textContent = wordObj.phonetic;
   document.getElementById("chinese").textContent = wordObj.chinese;
 }
+
+// 发音功能
+document.addEventListener("DOMContentLoaded", () => {
+  const englishElem = document.getElementById("english");
+  englishElem.addEventListener("click", () => {
+    const word = englishElem.textContent;
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-US";
+    speechSynthesis.speak(utterance);
+  });
+});
