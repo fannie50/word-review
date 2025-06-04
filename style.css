@@ -1,33 +1,46 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
   text-align: center;
-  padding: 30px;
-  background-color: #f4f4f4;
+  background-color: #fff9f0;
+  padding: 20px;
 }
 h1 {
+  font-size: 28px;
   color: #333;
 }
 .controls {
   margin-bottom: 20px;
 }
+button, select {
+  font-size: 16px;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 .card {
-  background-color: #fff;
-  padding: 20px;
-  margin: auto;
+  background: #fff;
   display: inline-block;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-top: 10px;
 }
 .english {
-  font-size: 2em;
+  font-size: 48px;
   font-weight: bold;
+  margin: 10px 0;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
 }
 .phonetic {
-  font-size: 1.2em;
+  font-size: 20px;
   color: #666;
+  margin: 5px 0;
 }
 .chinese {
-  font-size: 1.2em;
-  color: #444;
+  font-size: 20px;
+  color: #222;
+  margin: 8px 0;
 }
