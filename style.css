@@ -1,0 +1,33 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+h1 {
+  color: #333;
+}
+.controls {
+  margin-bottom: 20px;
+}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin: auto;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.english {
+  font-size: 2em;
+  font-weight: bold;
+}
+.phonetic {
+  font-size: 1.2em;
+  color: #666;
+}
+.chinese {
+  font-size: 1.2em;
+  color: #444;
+}
